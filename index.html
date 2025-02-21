@@ -1,267 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sri Ram Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://kit.fontawesome.com/f1aa8b584e.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Ram Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f1aa8b584e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!-- Loading Animation -->
-  <div id="loader">
-    <div class="spinner"></div>
-  </div>
+    <!-- Loading Animation -->
+    <div id="loading">
+        <div class="spinner"></div>
+    </div>
 
-  <div id="header">
-    <div class="container">
-      <nav>
-        <img src="images/SRI RAM (1).jpg" class="logo" alt="Sri Ram Logo" />
-        <ul>
-          <li><a href="#header">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#certificate">Certification</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <!-- Dark/Light Mode Toggle Button -->
-        <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">
-          <i class="fas fa-moon"></i>
-        </button>
-      </nav>
-      <div class="header-text">
-        <p>Master Mind Man</p>
-        <h1>Hi, I'm <span>Sri Ram</span><br /></h1>
+    <!-- Header Section -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/SRI RAM (1).jpg" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#internship">Internship</a></li>
+                    <li><a href="#certificate">Certificate</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p class="animated-text">Master Mind Man</p>
+                <h1 class="animated-text">Hi, I'm <span>Sri Ram</span><br></h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="scroll-animation">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/profile-pic.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi hello this is sriram here, studying final year mechanical engineering in SNS College of Technology. I'm now doing my internship at SNS ihub as a Project Manager intern, UI/UX designer, RND. After my 3 months of internship period, I was recommended for the top performance intern with a stipend.</p>
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Building Web Applications</li>
+                            <li><span>App Development</span><br>Developing Mobile Applications</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>PMO</span><br>SNS ihub</li>
+                            <li><span>Business Analyst</span><br>SRI Industries</li>
+                            <li><span>HR</span><br>Suvidha Foundation</li>
+                            <li><span>Junior Sales Intern</span><br>Creations</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>B.E. Mechanical Engineering</span><br>SNS College of Technology</li>
+                            <li><span>HSC</span><br>CMS Ganapathy, CBE.</li>
+                            <li><span>SSLC</span><br>CMS Ganapathy, CBE</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Internship Section -->
+    <div id="internship" class="scroll-animation">
+        <div class="container">
+            <h1 class="sub-title">My Internship</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-star"></i>
+                    <h2>Project Management</h2>
+                    <p>Certified in Project Management from SNS ihub.</p>
+                    <a href="#" class="btn">View</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-star"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>Certified in UI/UX Design from SNS ihub.</p>
+                    <a href="#" class="btn">View</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-star"></i>
+                    <h2>Business Analyst</h2>
+                    <p>Certified in Business Analysis from SRI Industries.</p>
+                    <a href="#" class="btn">View</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Certificate Section -->
+<div id="certificate" class="scroll-animation">
+  <div class="container">
+      <h1 class="sub-title">My Certificates</h1>
+      <div class="horizontal-scroll">
+          <button class="scroll-arrow left-arrow" onclick="scrollLeft()">&#10094;</button>
+          <div class="scroll-container">
+              <a href="https://example.com/cert1" target="_blank"><img src="images/logo.png" alt="Certificate 1"></a>
+              <a href="https://example.com/cert2" target="_blank"><img src="images/logo.png" alt="Certificate 2"></a>
+              <a href="https://example.com/cert3" target="_blank"><img src="images/cert3.jpg" alt="Certificate 3"></a>
+              <a href="https://example.com/cert4" target="_blank"><img src="images/cert4.jpg" alt="Certificate 4"></a>
+              <a href="https://example.com/cert5" target="_blank"><img src="images/cert5.jpg" alt="Certificate 5"></a>
+              <a href="https://example.com/cert6" target="_blank"><img src="images/cert6.jpg" alt="Certificate 6"></a>
+              <a href="https://example.com/cert7" target="_blank"><img src="images/cert7.jpg" alt="Certificate 7"></a>
+              <a href="https://example.com/cert8" target="_blank"><img src="images/cert8.jpg" alt="Certificate 8"></a>
+          </div>
+          <button class="scroll-arrow right-arrow" onclick="scrollRight()">&#10095;</button>
       </div>
-    </div>
   </div>
+</div>
 
-  <!-----------about---------->
-<div id="about">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="images/profile-pic.png" alt="Profile Picture">
-            </div>
-            <div class="about-col-2">
-                <h1 class="sub-title">About Me</h1>
-                <p>
-                    Hi, I'm Sri Ram, a final-year Mechanical Engineering student at SNS College of Technology (87%). I am passionate about project management, business analysis, and UI/UX design. Currently, I am a Project Manager Intern at SNS iHub, where I manage and monitor project timelines to ensure on-time delivery while aligning with business objectives.
-                </p>
-                <div class="tab-title">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('experence')">Experience</p>
-                    <p class="tab-links" onclick="opentab('education')">Education</p>
+    <!-- Contact Section -->
+    <div id="contact" class="scroll-animation">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i> sriram31mech@google.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i> 8608508884</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/srir-am"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://leetcode.com/u/jtI1UepQ0K/"><i class="fa-solid fa-code"></i></a>
+                        <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <a href="images/Sri Ram Resume.pdf" download class="btn btn2" id="download-cv">Download CV</a>
                 </div>
-                <div class="tab-contents active-tab" id="skills">
-                    <ul>
-                        <li><span>UI/UX</span><br>Figma, Flutter Flow</li>
-                        <li><span>Business Analysis</span><br>Power BI, Python, MySQL</li>
-                        <li><span>Mechanical & Automation</span><br>SolidWorks, Fusion 360</li>
-                        <li><span>Soft Skills</span><br>Quick Learning, Leadership, Client Engagement, Psychological Insight, Time Management</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="experence">
-                    <ul>
-                        <li><span>SNS iHub - Project Manager Intern</span><br>Managed and monitored project timelines to ensure on-time delivery while aligning with business objectives. (6 Months)</li>
-                        <li><span>SRI Industries - Business Analyst</span><br>Analyzed data and provided business insights to support strategic decisions. (1 Month)</li>
-                        <li><span>Suvidha Foundation - HR Management</span><br>Managed recruitment processes and employee onboarding. (1 Month)</li>
-                        <li><span>Creations - Junior Sales Intern</span><br>Supported digital marketing strategies to boost sales and customer relations. (2 Months)</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="education">
-                    <ul>
-                        <li><span>SNS College of Technology</span><br>B.E. Mechanical Engineering (2021-2025) | 87%</li>
-                        <li><span>CMS Matriculation Higher Secondary School</span><br>HSC (2020-2021) | 83%</li>
-                        <li><span>CMS Matriculation Higher Secondary School</span><br>SSLC (2018-2019) | 76%</li>
-                    </ul>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-----------certificate---------->
-<div id="certificate">
-    <div class="container">
-        <h1 class="sub-title">Certificates</h1>
-        <div class="services-list">
-            <div>
-                <i class="fa-solid fa-star"></i>
-                <h1>Business Analysis Certification</h1>
-                <p>Career Essentials in Business Analysis - Microsoft</p>
-                <a href="#">learn more</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-star"></i>
-                <h1>Project Management Certifications</h1>
-                <p>Software Project Management - Udemy, Project Management Foundation - PMI (USA), Business Benefits Realization Foundation - PMI (USA)</p>
-                <a href="#">learn more</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-star"></i>
-                <h1>Technical Certifications</h1>
-                <p>Automation in Manufacturing - NPTEL, Interfacing Mechanical Engineering with AI - Institution of Engineers</p>
-                <a href="#">learn more</a>
-            </div>
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Sri Ram. All rights reserved.</p>
         </div>
-    </div>
-</div>
+    </footer>
 
-  <!-- ------------portfolio--------->
-<div id="portfolio">
-    <div class="container">
-        <h3 class="sub-title">Internship Experience</h3>
-        <div class="work-list">
-            <div class="work">
-                <img src="images/work-1.png" alt="SNS iHub Internship">
-                <div class="layer">
-                    <h3>SNS iHub - Project Manager Intern</h3>
-                    <p>Managed and monitored project timelines to ensure on-time delivery while aligning with business objectives. (6 Months)</p>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/work-2.png" alt="SRI Industries Internship">
-                <div class="layer">
-                    <h3>SRI Industries - Business Analyst</h3>
-                    <p>Analyzed data and provided business insights to support strategic decisions. (1 Month)</p>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/work-3.png" alt="Suvidha Foundation Internship">
-                <div class="layer">
-                    <h3>Suvidha Foundation - HR Management</h3>
-                    <p>Managed recruitment processes and employee onboarding. (1 Month)</p>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-        </div>  
-        <a href="#" class="btn"> See More </a>
-    </div>
-</div>
+    <!-- Scroll-to-Top Button -->
+    <button id="scroll-to-top"><i class="fas fa-arrow-up"></i></button>
 
- <!-- ----------------contact------------------->
-<div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fas fa-paper-plane"></i> sriram31mech@gmail.com</p>
-                <p><i class="fas fa-phone-square-alt"></i> 860-850-8884</p>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/srir-am"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://leetcode.com/u/jtI1UepQ0K/"><i class="fa-solid fa-code"></i></a>
-                    <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a> 
-                </div>
-                <a href="images/Sri Ram_Resume.pdf" download class="btn btn2">Download CV</a>
-            </div>
-            <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
-                <span id="msg"></span>
-            </div>
-        </div>
-    </div>
-</div>
-  <!----------- Footer ----------->
-  <footer>
-    <div class="container">
-      <p>&copy; <span id="current-year"></span> Sri Ram. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <!-- Scroll-to-Top Button -->
-  <button id="scrollToTop" aria-label="Scroll to top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
-
-  <script>
-    /* ----------------- Dynamic Footer Year ----------------- */
-    document.getElementById("current-year").textContent = new Date().getFullYear();
-
-    /* ----------------- Loader ----------------- */
-    window.addEventListener("load", function () {
-      document.getElementById("loader").style.display = "none";
-    });
-
-    /* ----------------- About Tabs ----------------- */
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-
-    function opentab(tabname) {
-      for (let tablink of tablinks) {
-        tablink.classList.remove("active-link");
-      }
-      for (let tabcontent of tabcontents) {
-        tabcontent.classList.remove("active-tab");
-      }
-      event.currentTarget.classList.add("active-link");
-      document.getElementById(tabname).classList.add("active-tab");
-    }
-
-    /* ----------------- Form Validation & Submission ----------------- */
-    const form = document.forms["submit-to-google-sheet"];
-    const msg = document.getElementById("msg");
-
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      // Basic client-side validation
-      if (!form.checkValidity()) {
-        msg.style.color = "red";
-        msg.innerHTML = "Please fill in all required fields correctly.";
-        return;
-      }
-      fetch(
-        "https://script.google.com/macros/s/AKfycbzZ1ayx8pfnA0Rku_SXbbuPgB3JfYXzr-7_by6V1Yt496I27E_dxAaKbv9-lvUYo1TN/exec",
-        { method: "POST", body: new FormData(form) }
-      )
-        .then((response) => {
-          msg.style.color = "#61b752";
-          msg.innerHTML = "Message sent successfully";
-          setTimeout(function () {
-            msg.innerHTML = "";
-          }, 5000);
-          form.reset();
-        })
-        .catch((error) => {
-          msg.style.color = "red";
-          msg.innerHTML = "Error! Message not sent.";
-          console.error("Error!", error.message);
-        });
-    });
-
-    /* ----------------- Dark/Light Mode Toggle ----------------- */
-    const themeToggle = document.getElementById("theme-toggle");
-    themeToggle.addEventListener("click", function () {
-      document.body.classList.toggle("light-mode");
-      // Toggle icon between moon and sun
-      if (document.body.classList.contains("light-mode")) {
-        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-      } else {
-        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-      }
-    });
-
-    /* ----------------- Scroll-to-Top Button ----------------- */
-    const scrollToTopBtn = document.getElementById("scrollToTop");
-    window.addEventListener("scroll", function () {
-      if (window.scrollY > 300) {
-        scrollToTopBtn.style.display = "block";
-      } else {
-        scrollToTopBtn.style.display = "none";
-      }
-    });
-
-    scrollToTopBtn.addEventListener("click", function () {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  </script>
+    <script src="script.js"></script>
 </body>
 </html>
